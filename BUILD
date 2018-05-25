@@ -5,5 +5,8 @@ cc_library(
     hdrs = glob([
         "zmq.hpp",
     ]),
-    deps = ["@zmq"],
+    deps = [
+        "@system//:pthread",
+        "@zmq",
+    ],
 )
