@@ -379,6 +379,11 @@ namespace zmq
         }
 #endif
 
+        inline const char *group() const
+        {
+            return zmq_msg_group(const_cast<zmq_msg_t *>(&msg));
+        }
+
     private:
         //  The underlying message
         zmq_msg_t msg;
